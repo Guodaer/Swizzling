@@ -1,0 +1,15 @@
+//
+//  Swizzling-prefix.pch
+//  Swizzling
+//
+//  Created by moqing on 2018/2/8.
+//  Copyright © 2018年 guoda. All rights reserved.
+//
+
+#ifndef Swizzling_prefix_h
+#define Swizzling_prefix_h
+
+#import "NSMutableArray+Swizzling.h"
+#import "NSObject+Swizzling.h"
+
+#endif /* Swizzling_prefix_h */
