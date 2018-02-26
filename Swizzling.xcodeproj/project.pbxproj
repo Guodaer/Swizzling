@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5549A389204143E0003215CC /* GDAppCrashHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549A388204143E0003215CC /* GDAppCrashHandle.m */; };
+		5549A38E20417710003215CC /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549A38B2041770F003215CC /* NSMutableArray+Swizzling.m */; };
+		5549A38F20417710003215CC /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549A38C20417710003215CC /* NSObject+Swizzling.m */; };
+		5549A39220417771003215CC /* NSArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549A39120417771003215CC /* NSArray+Swizzling.m */; };
+		5549A39520417B3B003215CC /* NSDictionary+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549A39420417B3B003215CC /* NSDictionary+Swizzling.m */; };
+		554B0F762043A8F9002B25AA /* NSMutableDictionary+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554B0F752043A8F9002B25AA /* NSMutableDictionary+Swizzling.m */; };
+		554B0F792043AB4D002B25AA /* NSString+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554B0F782043AB4D002B25AA /* NSString+Swizzling.m */; };
+		554B0F7C2043AD30002B25AA /* NSMutableString+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554B0F7B2043AD30002B25AA /* NSMutableString+Swizzling.m */; };
+		554B0F7F2043ADEA002B25AA /* NSAttributedString+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554B0F7E2043ADEA002B25AA /* NSAttributedString+Swizzling.m */; };
+		554B0F822043AE95002B25AA /* NSMutableAttributedString+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554B0F812043AE95002B25AA /* NSMutableAttributedString+Swizzling.m */; };
+		554B0F852043B1AD002B25AA /* NSObject+AvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 554B0F842043B1AD002B25AA /* NSObject+AvoidCrash.m */; };
 		554EE1CB202BF34F001C9EB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1CA202BF34F001C9EB2 /* AppDelegate.m */; };
 		554EE1D3202BF34F001C9EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554EE1D2202BF34F001C9EB2 /* Assets.xcassets */; };
 		554EE1D6202BF34F001C9EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554EE1D4202BF34F001C9EB2 /* LaunchScreen.storyboard */; };
@@ -14,11 +25,31 @@
 		554EE1E5202BF5B8001C9EB2 /* GDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1E4202BF5B8001C9EB2 /* GDViewController.m */; };
 		554EE1E8202BF5CC001C9EB2 /* GDTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1E7202BF5CC001C9EB2 /* GDTabbarVC.m */; };
 		554EE1EB202BF5E1001C9EB2 /* GDNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1EA202BF5E1001C9EB2 /* GDNavigationVC.m */; };
-		554EE1EE202BFB3E001C9EB2 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1ED202BFB3E001C9EB2 /* NSObject+Swizzling.m */; };
-		554EE1F1202C0205001C9EB2 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1F0202C0205001C9EB2 /* NSMutableArray+Swizzling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5549A387204143E0003215CC /* GDAppCrashHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAppCrashHandle.h; sourceTree = "<group>"; };
+		5549A388204143E0003215CC /* GDAppCrashHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAppCrashHandle.m; sourceTree = "<group>"; };
+		5549A38A2041770F003215CC /* NSMutableArray+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Swizzling.h"; sourceTree = "<group>"; };
+		5549A38B2041770F003215CC /* NSMutableArray+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Swizzling.m"; sourceTree = "<group>"; };
+		5549A38C20417710003215CC /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		5549A38D20417710003215CC /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		5549A39020417771003215CC /* NSArray+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Swizzling.h"; sourceTree = "<group>"; };
+		5549A39120417771003215CC /* NSArray+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Swizzling.m"; sourceTree = "<group>"; };
+		5549A39320417B3B003215CC /* NSDictionary+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Swizzling.h"; sourceTree = "<group>"; };
+		5549A39420417B3B003215CC /* NSDictionary+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Swizzling.m"; sourceTree = "<group>"; };
+		554B0F742043A8F9002B25AA /* NSMutableDictionary+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Swizzling.h"; sourceTree = "<group>"; };
+		554B0F752043A8F9002B25AA /* NSMutableDictionary+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Swizzling.m"; sourceTree = "<group>"; };
+		554B0F772043AB4D002B25AA /* NSString+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Swizzling.h"; sourceTree = "<group>"; };
+		554B0F782043AB4D002B25AA /* NSString+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Swizzling.m"; sourceTree = "<group>"; };
+		554B0F7A2043AD30002B25AA /* NSMutableString+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Swizzling.h"; sourceTree = "<group>"; };
+		554B0F7B2043AD30002B25AA /* NSMutableString+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Swizzling.m"; sourceTree = "<group>"; };
+		554B0F7D2043ADEA002B25AA /* NSAttributedString+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Swizzling.h"; sourceTree = "<group>"; };
+		554B0F7E2043ADEA002B25AA /* NSAttributedString+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Swizzling.m"; sourceTree = "<group>"; };
+		554B0F802043AE95002B25AA /* NSMutableAttributedString+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Swizzling.h"; sourceTree = "<group>"; };
+		554B0F812043AE95002B25AA /* NSMutableAttributedString+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Swizzling.m"; sourceTree = "<group>"; };
+		554B0F832043B1AD002B25AA /* NSObject+AvoidCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AvoidCrash.h"; sourceTree = "<group>"; };
+		554B0F842043B1AD002B25AA /* NSObject+AvoidCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AvoidCrash.m"; sourceTree = "<group>"; };
 		554EE1C6202BF34F001C9EB2 /* Swizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554EE1C9202BF34F001C9EB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		554EE1CA202BF34F001C9EB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,10 +63,6 @@
 		554EE1E7202BF5CC001C9EB2 /* GDTabbarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTabbarVC.m; sourceTree = "<group>"; };
 		554EE1E9202BF5E1001C9EB2 /* GDNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDNavigationVC.h; sourceTree = "<group>"; };
 		554EE1EA202BF5E1001C9EB2 /* GDNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDNavigationVC.m; sourceTree = "<group>"; };
-		554EE1EC202BFB3E001C9EB2 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
-		554EE1ED202BFB3E001C9EB2 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
-		554EE1EF202C0205001C9EB2 /* NSMutableArray+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Swizzling.h"; sourceTree = "<group>"; };
-		554EE1F0202C0205001C9EB2 /* NSMutableArray+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Swizzling.m"; sourceTree = "<group>"; };
 		554EE1F2202C3A84001C9EB2 /* Swizzling-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swizzling-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +77,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5549A3862041154F003215CC /* AvoidCrash */ = {
+			isa = PBXGroup;
+			children = (
+				5549A387204143E0003215CC /* GDAppCrashHandle.h */,
+				5549A388204143E0003215CC /* GDAppCrashHandle.m */,
+				5549A38D20417710003215CC /* NSObject+Swizzling.h */,
+				5549A38C20417710003215CC /* NSObject+Swizzling.m */,
+				554B0F832043B1AD002B25AA /* NSObject+AvoidCrash.h */,
+				554B0F842043B1AD002B25AA /* NSObject+AvoidCrash.m */,
+				5549A38A2041770F003215CC /* NSMutableArray+Swizzling.h */,
+				5549A38B2041770F003215CC /* NSMutableArray+Swizzling.m */,
+				5549A39020417771003215CC /* NSArray+Swizzling.h */,
+				5549A39120417771003215CC /* NSArray+Swizzling.m */,
+				5549A39320417B3B003215CC /* NSDictionary+Swizzling.h */,
+				5549A39420417B3B003215CC /* NSDictionary+Swizzling.m */,
+				554B0F742043A8F9002B25AA /* NSMutableDictionary+Swizzling.h */,
+				554B0F752043A8F9002B25AA /* NSMutableDictionary+Swizzling.m */,
+				554B0F772043AB4D002B25AA /* NSString+Swizzling.h */,
+				554B0F782043AB4D002B25AA /* NSString+Swizzling.m */,
+				554B0F7A2043AD30002B25AA /* NSMutableString+Swizzling.h */,
+				554B0F7B2043AD30002B25AA /* NSMutableString+Swizzling.m */,
+				554B0F7D2043ADEA002B25AA /* NSAttributedString+Swizzling.h */,
+				554B0F7E2043ADEA002B25AA /* NSAttributedString+Swizzling.m */,
+				554B0F802043AE95002B25AA /* NSMutableAttributedString+Swizzling.h */,
+				554B0F812043AE95002B25AA /* NSMutableAttributedString+Swizzling.m */,
+			);
+			path = AvoidCrash;
+			sourceTree = "<group>";
+		};
 		554EE1BD202BF34F001C9EB2 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +125,9 @@
 		554EE1C8202BF34F001C9EB2 /* Swizzling */ = {
 			isa = PBXGroup;
 			children = (
+				5549A3862041154F003215CC /* AvoidCrash */,
 				554EE1C9202BF34F001C9EB2 /* AppDelegate.h */,
 				554EE1CA202BF34F001C9EB2 /* AppDelegate.m */,
-				554EE1EC202BFB3E001C9EB2 /* NSObject+Swizzling.h */,
-				554EE1ED202BFB3E001C9EB2 /* NSObject+Swizzling.m */,
-				554EE1EF202C0205001C9EB2 /* NSMutableArray+Swizzling.h */,
-				554EE1F0202C0205001C9EB2 /* NSMutableArray+Swizzling.m */,
 				554EE1E2202BF5AC001C9EB2 /* MainControl */,
 				554EE1D2202BF34F001C9EB2 /* Assets.xcassets */,
 				554EE1F2202C3A84001C9EB2 /* Swizzling-prefix.pch */,
@@ -168,13 +221,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554EE1F1202C0205001C9EB2 /* NSMutableArray+Swizzling.m in Sources */,
+				5549A38E20417710003215CC /* NSMutableArray+Swizzling.m in Sources */,
+				554B0F7F2043ADEA002B25AA /* NSAttributedString+Swizzling.m in Sources */,
 				554EE1EB202BF5E1001C9EB2 /* GDNavigationVC.m in Sources */,
-				554EE1EE202BFB3E001C9EB2 /* NSObject+Swizzling.m in Sources */,
 				554EE1D9202BF34F001C9EB2 /* main.m in Sources */,
+				554B0F822043AE95002B25AA /* NSMutableAttributedString+Swizzling.m in Sources */,
+				554B0F792043AB4D002B25AA /* NSString+Swizzling.m in Sources */,
+				5549A38F20417710003215CC /* NSObject+Swizzling.m in Sources */,
+				554B0F852043B1AD002B25AA /* NSObject+AvoidCrash.m in Sources */,
+				5549A39520417B3B003215CC /* NSDictionary+Swizzling.m in Sources */,
 				554EE1E5202BF5B8001C9EB2 /* GDViewController.m in Sources */,
 				554EE1CB202BF34F001C9EB2 /* AppDelegate.m in Sources */,
+				5549A39220417771003215CC /* NSArray+Swizzling.m in Sources */,
+				5549A389204143E0003215CC /* GDAppCrashHandle.m in Sources */,
+				554B0F762043A8F9002B25AA /* NSMutableDictionary+Swizzling.m in Sources */,
 				554EE1E8202BF5CC001C9EB2 /* GDTabbarVC.m in Sources */,
+				554B0F7C2043AD30002B25AA /* NSMutableString+Swizzling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +367,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Swizzling/Swizzling-prefix.pch";
 				INFOPLIST_FILE = Swizzling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xs.moqing.Swizzling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +384,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Swizzling/Swizzling-prefix.pch";
 				INFOPLIST_FILE = Swizzling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xs.moqing.Swizzling;
 				PRODUCT_NAME = "$(TARGET_NAME)";

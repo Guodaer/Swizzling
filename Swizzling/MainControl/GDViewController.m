@@ -20,12 +20,30 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSString *str = nil;
-    NSArray *arr = @[str,@"000",str,@"111",@"222",str];
-    NSMutableArray *array = [arr copy];
-    NSLog(@"%@",array);
+    NSArray *arr = @[@"000",@"111",@"222",str];
+//    [arr objectAtIndex:10];
+//    NSMutableArray *array = [arr mutableCopy];
+//    [array addObject:str];
+//    [array insertObject:@"1" atIndex:10];
+//    NSLog(@"%@",array);
     
-//    [self class_copyMethodList:objc_getClass("__NSArrayM")];
-//    [self class_copyMethodList:[NSMutableArray class]];
+//    [self class_copyMethodList:objc_getClass("__NSPlaceholderDictionary")];
+//    [self class_copyMethodList:[NSDictionary class]];
+    
+//    NSDictionary *dic = @{@"1":str};
+//    NSMutableDictionary *md = [NSMutableDictionary dictionary];
+//    [md setObject:@"1" forKey:@"1"];
+//    [md setObject:@"2" forKey:@"2"];
+//    [md removeObjectForKey:str];
+
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 200, 100, 30);
+    [button setTitle:@"123" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(nihao:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
 }
 - (void)class_copyMethodList:(Class)class {
     unsigned int count;
