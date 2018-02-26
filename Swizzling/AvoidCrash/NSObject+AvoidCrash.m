@@ -8,6 +8,7 @@
 
 #import "NSObject+AvoidCrash.h"
 #import "GDAppCrashHandle.h"
+#import <objc/runtime.h>
 @implementation NSObject (AvoidCrash)
 
 + (void)load {
@@ -28,43 +29,52 @@
 
         [self swizzleSelector:@selector(forwardInvocation:) withSwizzledSelector:@selector(avoidCrashForwardInvocation:)];
         [self swizzleSelector:@selector(methodSignatureForSelector:) withSwizzledSelector:@selector(safe_methodSignatureForSelector:)];
+        
+        
     });
     
 }
 
-
+//forwardingTargetForSelector
 - (NSMethodSignature *)safe_methodSignatureForSelector:(SEL)aSelector{
-    NSLog(@"333333333");
-        NSMethodSignature *ms = [self safe_methodSignatureForSelector:aSelector];
-        if (ms == nil) {
-            ms = [GDAppCrashHandle instanceMethodSignatureForSelector:@selector(defaultSafeMethod)];
+//    NSLog(@"333333333");
+//        NSMethodSignature *ms = [self safe_methodSignatureForSelector:aSelector];
+//        if (ms == nil) {
+//            ms = [GDAppCrashHandle instanceMethodSignatureForSelector:@selector(defaultSafeMethod)];
+//        }
+//        return ms;
+    
+    //默认先调用原始方法，判断用户有没有对此进行处理，如果没有就会unrecognized异常，这里就要加上处理
+    NSMethodSignature *ms = [self safe_methodSignatureForSelector:aSelector];
+    if (ms == nil) {
+        if (![self respondsToSelector:aSelector]) {
+            //动态的给一个实例添加一个方法，去处理这个unrecognized selector
+            class_addMethod([self class], aSelector, (IMP)dynamicAdditionMethodIMP, "v@:");
         }
-        return ms;
-
+        ms = [self methodSignatureForSelector:aSelector];
+        
+    }
+    return ms;
+    
 }
 
-
+//假设须要传參直接在參数列表后面加入就好了
+void dynamicAdditionMethodIMP(id self, SEL _cmd) {
+//    NSLog(@"dynamicAdditionMethodIMP");
+    NSString *selector_Name = NSStringFromSelector(_cmd);
+    NSString *class_Name = NSStringFromClass([self class]);
+    NSString *msg = [NSString stringWithFormat:@"!!! [%@.m] 文件中的 [%@] 方法不存在",class_Name,selector_Name];
+    [GDAppCrashHandle noteErrorWithCustomMessage:msg];
+}
 
 - (void)avoidCrashForwardInvocation:(NSInvocation *)anInvocation {
     
-//    SEL selector = [anInvocation selector];
-//
-//    if ([self respondsToSelector:selector]) {
-//        [self avoidCrashForwardInvocation:anInvocation];
-//    }else {
-//        [GDAppCrashHandle noteErrorWithException:nil defaultToDo:@"selectorMethod 不存在"];
-//    }
-    
-    @try {
+    id target = nil;
+    if ([self methodSignatureForSelector:[anInvocation selector]] ) {
+        target = self;
+        [anInvocation invokeWithTarget:target];
+    } else {
         [self avoidCrashForwardInvocation:anInvocation];
-//
-    } @catch (NSException *exception) {
-//
-////        NSString *defaultToDo = AvoidCrashDefaultIgnore;
-////        [GDAppCrashHandle noteErrorWithException:exception defaultToDo:defaultToDo];
-//
-    } @finally {
-
     }
 
 }

@@ -10,12 +10,15 @@
 
 @implementation GDAppCrashHandle
 
-- (void)defaultSafeMethod {
-//    AvoidCrashLog(@"方法崩溃了🍎🍎🍎🍎");
-//    NSException
-//    [GDAppCrashHandle noteErrorWithException:nil defaultToDo:@"崩溃方法Selector"];
-}
 
++ (void)noteErrorWithCustomMessage:(NSString *)defaultToLog {
+    
+    NSString *logErrorMessage = [NSString stringWithFormat:@"\n\n%@\n\n%@",AvoidCrashSeparatorWithFlag,defaultToLog];
+    
+    logErrorMessage = [NSString stringWithFormat:@"%@\n\n%@",logErrorMessage,AvoidCrashSeparator];
+    
+    AvoidCrashLog(@"%@",logErrorMessage);
+}
 /**
  *  提示崩溃的信息(控制台输出、通知)
  *

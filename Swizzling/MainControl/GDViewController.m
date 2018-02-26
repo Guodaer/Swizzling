@@ -8,6 +8,7 @@
 
 #import "GDViewController.h"
 #import <objc/runtime.h>
+#import "GDAppCrashHandle.h"
 @interface GDViewController ()
 
 @end
@@ -19,8 +20,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *str = nil;
-    NSArray *arr = @[@"000",@"111",@"222",str];
+//    NSString *str = nil;
+//    NSArray *arr = @[@"000",@"111",@"222",str];
 //    [arr objectAtIndex:10];
 //    NSMutableArray *array = [arr mutableCopy];
 //    [array addObject:str];
@@ -39,12 +40,22 @@
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(100, 200, 100, 30);
-    [button setTitle:@"123" forState:UIControlStateNormal];
+    [button setTitle:@"click" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(nihao:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
+    
+    
 }
+
+- (void)nihao:(UIButton*)sender {
+    
+    GDAppCrashHandle *gd = [[GDAppCrashHandle alloc] init];
+    [gd performSelector:@selector(woqu) withObject:nil afterDelay:0];
+    
+}
+
 - (void)class_copyMethodList:(Class)class {
     unsigned int count;
     Method *ml = class_copyMethodList(class, &count);
