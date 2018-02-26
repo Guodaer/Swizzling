@@ -41,10 +41,8 @@
 
 @interface GDAppCrashHandle : NSObject
 
-
-//防止崩溃的默认方法
-- (void)defaultSafeMethod;
 //catch到崩溃信息打新出来
++ (void)noteErrorWithCustomMessage:(NSString *)defaultToLog;
 + (void)noteErrorWithException:(NSException *)exception defaultToDo:(NSString *)defaultToDo;
 
 @end
