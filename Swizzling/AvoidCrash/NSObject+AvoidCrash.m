@@ -30,7 +30,6 @@
         [self swizzleSelector:@selector(forwardInvocation:) withSwizzledSelector:@selector(avoidCrashForwardInvocation:)];
         [self swizzleSelector:@selector(methodSignatureForSelector:) withSwizzledSelector:@selector(safe_methodSignatureForSelector:)];
         
-        
     });
     
 }
@@ -45,19 +44,19 @@
     
     //默认先调用原始方法，判断用户有没有对此进行处理，如果没有就会unrecognized异常，这里就要加上处理
     NSMethodSignature *ms = [self safe_methodSignatureForSelector:aSelector];
+    
     if (ms == nil) {
         if (![self respondsToSelector:aSelector]) {
             //动态的给一个实例添加一个方法，去处理这个unrecognized selector
             class_addMethod([self class], aSelector, (IMP)dynamicAdditionMethodIMP, "v@:");
+            
         }
         ms = [self methodSignatureForSelector:aSelector];
-        
     }
     return ms;
     
 }
 
-//假设须要传參直接在參数列表后面加入就好了
 void dynamicAdditionMethodIMP(id self, SEL _cmd) {
     NSString *selector_Name = NSStringFromSelector(_cmd);
     NSString *class_Name = NSStringFromClass([self class]);

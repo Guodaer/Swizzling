@@ -25,6 +25,7 @@
 		554EE1E5202BF5B8001C9EB2 /* GDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1E4202BF5B8001C9EB2 /* GDViewController.m */; };
 		554EE1E8202BF5CC001C9EB2 /* GDTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1E7202BF5CC001C9EB2 /* GDTabbarVC.m */; };
 		554EE1EB202BF5E1001C9EB2 /* GDNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 554EE1EA202BF5E1001C9EB2 /* GDNavigationVC.m */; };
+		556597D7204553F200F174C7 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 556597D6204553F200F174C7 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		554EE1E9202BF5E1001C9EB2 /* GDNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDNavigationVC.h; sourceTree = "<group>"; };
 		554EE1EA202BF5E1001C9EB2 /* GDNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDNavigationVC.m; sourceTree = "<group>"; };
 		554EE1F2202C3A84001C9EB2 /* Swizzling-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swizzling-prefix.pch"; sourceTree = "<group>"; };
+		556597D5204553F200F174C7 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		556597D6204553F200F174C7 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 			children = (
 				554EE1E3202BF5B8001C9EB2 /* GDViewController.h */,
 				554EE1E4202BF5B8001C9EB2 /* GDViewController.m */,
+				556597D5204553F200F174C7 /* Test.h */,
+				556597D6204553F200F174C7 /* Test.m */,
 				554EE1E6202BF5CC001C9EB2 /* GDTabbarVC.h */,
 				554EE1E7202BF5CC001C9EB2 /* GDTabbarVC.m */,
 				554EE1E9202BF5E1001C9EB2 /* GDNavigationVC.h */,
@@ -225,6 +230,7 @@
 				554B0F7F2043ADEA002B25AA /* NSAttributedString+Swizzling.m in Sources */,
 				554EE1EB202BF5E1001C9EB2 /* GDNavigationVC.m in Sources */,
 				554EE1D9202BF34F001C9EB2 /* main.m in Sources */,
+				556597D7204553F200F174C7 /* Test.m in Sources */,
 				554B0F822043AE95002B25AA /* NSMutableAttributedString+Swizzling.m in Sources */,
 				554B0F792043AB4D002B25AA /* NSString+Swizzling.m in Sources */,
 				5549A38F20417710003215CC /* NSObject+Swizzling.m in Sources */,

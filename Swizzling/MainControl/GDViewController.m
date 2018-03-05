@@ -9,6 +9,7 @@
 #import "GDViewController.h"
 #import <objc/runtime.h>
 #import "GDAppCrashHandle.h"
+#import "Test.h"
 @interface GDViewController ()
 
 @end
@@ -46,8 +47,26 @@
     [self.view addSubview:button];
     
     
+    Test *test1 =[[Test alloc] init];
+    test1.name = @"one";
+    test1.age = 16;
     
+    Test *test2 =[[Test alloc] init];
+    test2.name = @"one";
+//    test2.age = 16;
+
+    NSLog(@"%d",test2.age);
+    test2.age = 11;
+    NSLog(@"%d",test2.age);
+    
+    
+    if ([test1 isEqual:test2]) {
+        NSLog(@"11111111111");
+    }else {
+        NSLog(@"22222222222");
+    }
 }
+
 
 - (void)nihao:(UIButton*)sender {
     

@@ -9,8 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "NSObject+Swizzling.h"
+//一下类是category
 #import "NSMutableArray+Swizzling.h"
-
+#import "NSObject+AvoidCrash.h"
+#import "NSArray+Swizzling.h"
+#import "NSDictionary+Swizzling.h"
+#import "NSMutableDictionary+Swizzling.h"
+#import "NSString+Swizzling.h"
+#import "NSMutableString+Swizzling.h"
+#import "NSAttributedString+Swizzling.h"
+#import "NSMutableAttributedString+Swizzling.h"
 
 #define key_errorName        @"errorName"
 #define key_errorReason      @"errorReason"
@@ -44,5 +52,6 @@
 //catch到崩溃信息打新出来
 + (void)noteErrorWithCustomMessage:(NSString *)defaultToLog;
 + (void)noteErrorWithException:(NSException *)exception defaultToDo:(NSString *)defaultToDo;
++ (NSString *)getMainCallStackSymbolMessageWithCallStackSymbols:(NSArray<NSString *> *)callStackSymbols;
 
 @end
